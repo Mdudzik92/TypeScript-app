@@ -117,3 +117,17 @@ const bob = new Person(2, 'Bob Baggins')
 
 // console.log(matt, bob)
 
+// Subclasses
+class Employee extends Person {
+  position: string
+
+  constructor(id: number, name: string, position: string) {
+    super(id, name)
+    this.position = position
+  }
+}
+
+const emp = new Employee(3, 'Johnny', 'Developer')
+
+console.log(emp.name)
+console.log(emp.register())
