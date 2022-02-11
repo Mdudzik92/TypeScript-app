@@ -87,3 +87,33 @@ interface MathFunc {
 const add: MathFunc = (x: number, y: number): number => x + y
 const sub: MathFunc = (x: number, y: number): number => x - y
 
+interface PersonInterface {
+  id: number
+  name: string
+  register(): string
+}
+
+// Classes
+class Person implements PersonInterface {
+  id: number
+  name: string
+
+  // A constructor will run whenever an object is instantiated from that class
+  constructor(id: number, name: string) {
+    this.id = id
+    this.name = name
+  }
+
+  register() {
+    return `${this.name} is now registered`
+  }
+}
+
+// This is creating a new Person object inside this variable called matt. This is instantiating the class
+const matt = new Person(1, 'Matt Dudzik')
+const bob = new Person(2, 'Bob Baggins')
+
+// console.log(matt.register())
+
+// console.log(matt, bob)
+
