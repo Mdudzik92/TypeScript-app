@@ -33,8 +33,8 @@ var Direction2;
     Direction2["Left"] = "West";
     Direction2["Right"] = "East";
 })(Direction2 || (Direction2 = {}));
-console.log(Direction1.Left);
-console.log(Direction2.Left);
+// console.log(Direction1.Left);
+// console.log(Direction2.Left);
 const user = {
     id: 1,
     name: 'John'

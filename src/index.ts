@@ -38,8 +38,8 @@ enum Direction2 {
   Right = 'East'
 }
 
-console.log(Direction1.Left)
-console.log(Direction2.Left)
+// console.log(Direction1.Left)
+// console.log(Direction2.Left)
 
 // Objects
 type User = {
@@ -51,3 +51,39 @@ const user: User = {
   id: 1,
   name: 'John'
 }
+
+// Type Assertion
+let cid: any = 1
+// let customerId = <number>cid
+let customerId = cid as number
+
+// Functions
+function addNum(x: number, y: number): number {
+  return x + y 
+}
+
+// Void
+function log(message: string | number): void {
+  console.log(message)
+}
+
+// Interfaces
+interface UserInterface {
+  readonly id: number
+  name: string
+  age?: number
+}
+
+const user1: UserInterface = {
+  id: 1,
+  name: 'John',
+}
+
+
+interface MathFunc {
+  (x: number, y: number): number
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y
+const sub: MathFunc = (x: number, y: number): number => x - y
+
