@@ -131,3 +131,18 @@ const emp = new Employee(3, 'Johnny', 'Developer')
 
 console.log(emp.name)
 console.log(emp.register())
+
+
+// Generics
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items)
+}
+
+let numArray = getArray<number>([1,2,3,4])
+let strArray = getArray<string>(['Matt', 'John', 'Jill'])
+
+strArray.push('hello')
+numArray.push(1)
+
+// To use with react:
+// npx create-react-app . --template typescript
